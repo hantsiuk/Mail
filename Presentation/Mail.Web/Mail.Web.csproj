@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C7804BE0-E8FC-4DF7-88B3-C9227C6BF72E}</ProjectGuid>
+    <ProjectGuid>{7F8B7836-7B4F-4BE7-9D62-310E62A398E8}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mail</RootNamespace>
-    <AssemblyName>Mail</AssemblyName>
+    <RootNamespace>Mail.Web</RootNamespace>
+    <AssemblyName>Mail.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -107,7 +107,6 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -125,8 +124,22 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mail.Data\Mail.Data.csproj">
+      <Project>{78c9dd91-e40a-4a19-92fd-baeaa6cdac81}</Project>
+      <Name>Mail.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Mail.Services\Mail.Services.csproj">
+      <Project>{1d3e83bd-b111-4af0-9051-d682a04e8535}</Project>
+      <Name>Mail.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Mail.WebApi\Mail.WebApi.csproj">
+      <Project>{a8c0a0fb-f7c6-4207-ad68-83ee36a4f0d2}</Project>
+      <Name>Mail.WebApi</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -141,9 +154,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>55011</DevelopmentServerPort>
+          <DevelopmentServerPort>55725</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:55011/</IISUrl>
+          <IISUrl>http://localhost:55725/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

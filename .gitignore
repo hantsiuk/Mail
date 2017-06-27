@@ -60,3 +60,5 @@ Temporary Items
 /packages
 /Presentation/Mail/bin
 /Presentation/Mail/obj/Debug
+/Presentation/Mail.Web/bin
+/Presentation/Mail.Web/obj/Debug

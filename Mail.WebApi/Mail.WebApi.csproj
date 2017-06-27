@@ -42,5 +42,19 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mail.Data\Mail.Data.csproj">
+      <Project>{78c9dd91-e40a-4a19-92fd-baeaa6cdac81}</Project>
+      <Name>Mail.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mail.Services\Mail.Services.csproj">
+      <Project>{1d3e83bd-b111-4af0-9051-d682a04e8535}</Project>
+      <Name>Mail.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
